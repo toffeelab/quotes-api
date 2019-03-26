@@ -1,0 +1,20 @@
+{
+  "name": "quotes-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {
+    "aws-serverless-express": "^3.3.5",
+    "express": "^4.16.4",
+    "serverless-mysql": "^1.2.1"
+  },
+  "devDependencies": {
+    "serverless": "^1.39.1",
+    "serverless-offline": "^4.9.2",
+    "serverless-webpack": "^5.2.0"
+  }
+}

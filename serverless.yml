@@ -1,0 +1,21 @@
+service: quotes-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: prod
+  region: ap-north-east-2
+  memorySize: 128
+  timeout: 30
+  versionFunctions: false
+
+functions:
+  api:
+    name: ${self:service}-${self:provider.stage}
+    handler: src/api/index.handler
+    events:
+      -http: ANY /api/{proxy+}
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
