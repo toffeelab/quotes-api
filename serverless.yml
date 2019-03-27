@@ -14,7 +14,7 @@ functions:
     name: ${self:service}-${self:provider.stage}
     handler: src/api/index.handler
     events:
-      -http: ANY /api/{proxy+}
+      - http: ANY /api/{proxy+}
 
 plugins:
   - serverless-webpack
