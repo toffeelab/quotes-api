@@ -9,6 +9,10 @@ provider:
   timeout: 30
   versionFunctions: false
 
+custom:
+  webpack:
+    includeModules: true
+
 functions:
   api:
     name: ${self:service}-${self:provider.stage}

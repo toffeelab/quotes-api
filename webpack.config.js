@@ -1,3 +1,4 @@
+const path = require('path');
 const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 
@@ -13,6 +14,11 @@ module.exports = {
   performance: {
     hints: false,
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+    },
+  },
   module: {
     rules: [
       {
@@ -21,6 +27,11 @@ module.exports = {
         include: __dirname,
         exclude: /node_modules/
       }
-    ]
+    ],
+  },
+  output: {
+    path: path.join(__dirname, '.webpack'),
+    filename: '[name].js',
+    sourceMapFilename: '[file].map'
   }
 };

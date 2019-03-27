@@ -10,16 +10,20 @@
     "debug": "set SLS_DEBUG=* && node --inspect ./node_modules/serverless/bin/serverless offline -s dev"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.2",
     "aws-serverless-express": "^3.3.5",
     "express": "^4.16.4",
     "sequelize": "^5.2.1",
-    "serverless-mysql": "^1.2.1"
+    "serverless-mysql": "^1.2.1",
+    "source-map-support": "^0.5.11"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "babel-loader": "^8.0.5",
+    "babel-plugin-source-map-support": "^2.0.1",
     "jest": "^24.5.0",
     "serverless": "^1.39.1",
     "serverless-offline": "^4.9.2",
