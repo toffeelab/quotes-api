@@ -4,7 +4,7 @@ const router = express.Router();
 const routes = ['quote'];
 
 routes.forEach(route => {
-  router.use(`/${route}`, import(`./${route}`).default);
+  router.use(`/${route}`, require(`./${route}`).default);
 });
 
 export default router;
